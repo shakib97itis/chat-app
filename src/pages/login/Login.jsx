@@ -3,12 +3,13 @@ import Input from "../../components/formComponents/input";
 import RagistrationTemplate from "../../components/registrationTemplate/RegistrationTemplate";
 import image from "../../assets/person-using-phone.jpg";
 import { FcGoogle } from "react-icons/fc";
+import Button from "../../components/buttons/button";
 
 function Login() {
   return (
     <RagistrationTemplate img={image}>
-      <div className="mb-9">
-        <h1 className="mb-2.5 font-serif text-3xl font-bold">
+      <div className="mb-8">
+        <h1 className="mb-7 font-serif text-3xl font-bold">
           Login to your account!
         </h1>
         <div>
@@ -33,13 +34,11 @@ function Login() {
           label="Password"
           name="password"
           id="passwordId"
-          className="mb-11"
+          className="mb-8"
         />
 
-        <div className="mb-6">
-          <button className="mt- w-full rounded-full bg-space py-4 text-white">
-            Login
-          </button>
+        <div className="mb-4">
+          <Button>Log in</Button>
         </div>
 
         <div className="">
