@@ -82,7 +82,7 @@ function Ragistration() {
       </div>
 
       {/* REGISTRATION FORM */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <Input
           type="text"
           label="Full Name"
