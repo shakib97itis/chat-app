@@ -3,10 +3,15 @@ import Input from "../../components/formComponents/input";
 import templateImage from "../../assets/registration_img.svg";
 import RagistrationTemplate from "./RegistrationTemplate";
 import Button from "../../components/buttons/button";
+import { useNavigate } from "react-router";
+import { addDoc, collection } from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "../../firebase";
 
 function Ragistration() {
   const [values, setValues] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState({ name: "", email: "", password: "" });
+  const navigate = useNavigate();
 
   /**
    * This function updates the values state with the value of the input field
@@ -51,7 +56,6 @@ function Ragistration() {
     } else {
       errors.password = "";
     }
-
     return errors;
   };
 
@@ -60,11 +64,27 @@ function Ragistration() {
    * @param {*} e The event object
    * @returns void
    */
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const error = validateForm();
     if (error.name === "" && error.email === "" && error.password === "") {
-      console.log(values);
+      try {
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          values.email,
+          values.password,
+        );
+
+        const docRef = await addDoc(collection(db, "users"), {
+          name: values.name,
+          email: values.email,
+          uid: userCredential.user.uid,
+        });
+        console.log("User Registered Successfully", docRef.id);
+        navigate("/login");
+      } catch (error) {
+        console.log(error);
+      }
     }
     setError(error);
   };
@@ -142,4 +162,3 @@ function Ragistration() {
 }
 
 export default Ragistration;
-

@@ -6,9 +6,14 @@ import LoginWithButton from "../../components/buttons/LoginWithButton";
 import LoginTemplate from "./LoginTemplate";
 import templateImage from "../../assets/login_img.svg";
 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router";
+import { auth } from "../../firebase";
+
 function Login() {
   const [values, setValues] = useState({ email: "", password: "" });
   const [error, setError] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
 
   /**
    * This function updates the values state with the value of the input field
@@ -55,11 +60,16 @@ function Login() {
    * @param {*} e The event object
    * @returns void
    */
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const error = validateForm();
-    if (error.name === "" && error.email === "" && error.password === "") {
-      console.log(values);
+    if (error.email === "" && error.password === "") {
+      try {
+        await signInWithEmailAndPassword(auth, values.email, values.password);
+        navigate("/");
+      } catch (error) {
+        console.error("Error signing in with password and email", error);
+      }
     } else {
       setError(error);
     }
