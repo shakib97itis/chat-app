@@ -13,7 +13,9 @@ function Input({
 }) {
   return (
     <>
-      <div className={`relative mt-4 flex flex-col ${className}`}>
+      <div
+        className={`relative mt-4 flex flex-col lg:max-w-[372px] ${className}`}
+      >
         <label
           className="absolute top-0 left-8 z-10 -translate-y-1/2 bg-neutral-01 px-3 font-tertiary text-sm font-semibold text-secondary transition-all duration-200 ease-in-out"
           htmlFor={id}

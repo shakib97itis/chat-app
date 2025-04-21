@@ -1,29 +1,31 @@
 import PropTypes from "prop-types";
 
 function Input({
-  type,
-  label,
-  placeholder,
-  name,
-  id,
   className,
-  value,
-  handleChange,
   error,
+  handleChange,
+  id,
+  label,
+  name,
+  placeholder,
+  type,
+  value,
 }) {
   return (
     <>
-      <div className={`flex flex-col lg:min-w-[372px] ${className}`}>
+      <div className={`flex flex-col lg:w-[372px] ${className}`}>
         <label
-          className="text-space/70 font-sans text-sm font-medium transition-all duration-200 ease-in-out"
+          className="font-primary text-sm font-medium text-secondary/70 transition-all duration-200 ease-in-out"
           htmlFor={id}
         >
-          {label}
+          {label}:
         </label>
         <input
-          className={`border-space text-space focus:border-space/70 border-b-2 px-1 py-3 font-sans text-lg font-medium transition-all duration-200 ease-in-out focus:outline-none`}
+          className={`border-b-2 border-secondary px-1 py-3 font-primary text-lg font-medium text-secondary transition-all duration-200 ease-in-out focus:border-secondary/70 focus:outline-none`}
           style={{
-            borderColor: error ? "red" : "var(--color-space)",
+            borderColor: error
+              ? "var(--color-tertiary)"
+              : "var(--color-secondary)",
           }}
           type={type}
           name={name}
@@ -32,11 +34,13 @@ function Input({
           value={value}
           onChange={handleChange}
         />
-        {error && (
-          <p className="text-red-500 mt-2 text-sm font-normal transition-all duration-200 ease-in-out">
-            {error}
-          </p>
-        )}
+        <div className="min-h-[50px] px-1 py-2">
+          {error && (
+            <p className="font-primary text-sm font-normal text-tertiary transition-all duration-200 ease-in-out">
+              {error}
+            </p>
+          )}
+        </div>
       </div>
     </>
   );
