@@ -12,21 +12,21 @@ const Home = () => {
         {/* NAVIGATION BAR */}
         <Navigation />
         {/* Dashboard content */}
-        <main className="grid w-full grid-cols-3 grid-rows-2 gap-[10px]">
+        <main className="grid w-full gap-[20px] lg:grid-cols-2 xl:grid-cols-3">
           <div className="">
             <div>
-              <div className="relative shadow-lg rounded-[20px] mb-[22px]">
+              <div className="relative mb-[22px] rounded-[20px] shadow-lg">
                 <input
-                  className="w-full font-secondary font-medium text-base rounded-3xl px-[20px] ps-[50px] py-[16px]"
+                  className="w-full rounded-3xl px-[20px] py-[16px] ps-[50px] font-secondary text-base font-medium"
                   type="text"
                   placeholder="Search"
                   name="search"
                   id="search"
                 />
-                <span className="absolute top-1/2 -translate-y-1/2 left-[20px] text-2xl">
+                <span className="absolute top-1/2 left-[20px] -translate-y-1/2 text-2xl">
                   <RiSearchLine />
                 </span>
-                <span className="absolute top-1/2 -translate-y-1/2 right-[20px] text-2xl text-primary">
+                <span className="absolute top-1/2 right-[20px] -translate-y-1/2 text-2xl text-primary">
                   <IoEllipsisVertical />
                 </span>
               </div>
