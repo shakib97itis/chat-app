@@ -1,29 +1,46 @@
 import React from "react";
-import { MdOutlineHome } from "react-icons/md";
-// import Icons from "../../Icons";
+import Container from "../../components/common/container/container";
+import Navigation from "../../components/navigation/Navigation";
+import DashboardCard from "../../components/DashboardCard/DashboardCard";
+import { RiSearchLine } from "react-icons/ri";
+import { IoEllipsisVertical } from "react-icons/io5";
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4 py-4">
-      {/* NAVIGATION BAR */}
-      <div className="w-[186px] bg-primary pl-[25px]">
-        <div className="mb-[20px]">
-          <img src="/public/profile-img/profile-6.png" alt="" />
-        </div>
-        <div className="">
-          <div className="relative flex py-[20px] rounded-s-3xl items-center justify-center bg-neutral-01">
-            {/* Icon */}
+    <Container>
+      <div className="flex h-full gap-[20px]">
+        {/* NAVIGATION BAR */}
+        <Navigation />
+        {/* Dashboard content */}
+        <main className="grid w-full grid-cols-3 grid-rows-2 gap-[10px]">
+          <div className="">
             <div>
-              <MdOutlineHome className="text-6xl" />
+              <div className="relative shadow-lg rounded-[20px] mb-[22px]">
+                <input
+                  className="w-full font-secondary font-medium text-base rounded-3xl px-[20px] ps-[50px] py-[16px]"
+                  type="text"
+                  placeholder="Search"
+                  name="search"
+                  id="search"
+                />
+                <span className="absolute top-1/2 -translate-y-1/2 left-[20px] text-2xl">
+                  <RiSearchLine />
+                </span>
+                <span className="absolute top-1/2 -translate-y-1/2 right-[20px] text-2xl text-primary">
+                  <IoEllipsisVertical />
+                </span>
+              </div>
+              <DashboardCard listTitle={"Explore Group"} />
             </div>
-            {/* bar */}
-            <div className="absolute h-full w-[8px] rounded-s-2xl bg-secondary right-0"></div>
           </div>
-        </div>
+          <DashboardCard listTitle={"Friends"} />
+          <DashboardCard listTitle={"Users"} />
+          <DashboardCard listTitle={"Users"} />
+          <DashboardCard listTitle={"Users"} />
+          <DashboardCard listTitle={"Users"} />
+        </main>
       </div>
-      {/* Dashboard content */}
-      <main></main>
-    </div>
+    </Container>
   );
 };
 
