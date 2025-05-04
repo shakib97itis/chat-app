@@ -38,7 +38,7 @@ const DashboardCard = ({ listTitle }) => {
   // Sanitize the data
 
   return (
-    <div className="rounded-3xl px-[20px] py-[20px] shadow-lg bg-accent-01">
+    <div className="rounded-3xl px-[20px] py-[20px] shadow-lg">
       <div className="flex items-center justify-between">
         <h2 className="font-secondary text-xl font-semibold">{listTitle}</h2>
         <button className="cursor-pointer text-primary">
@@ -55,7 +55,7 @@ const DashboardCard = ({ listTitle }) => {
               <div
                 className={`flex items-center gap-[10px] pt-[16px] ${isLastItem ? "" : "pb-[16px]"}`}
               >
-                <div className="h-[70px] w-[70px] rounded-full bg-primary">
+                <div className="h-[70px] w-[70px] rounded-full">
                   <img
                     src="/public/group-img/group-1.png"
                     className="h-full w-full object-cover"
@@ -68,7 +68,7 @@ const DashboardCard = ({ listTitle }) => {
                   <p className="text-sm font-medium">Hi Guys, Wassup!</p>
                 </div>
                 <div className="ms-auto">
-                  <button className="rounded bg-primary px-[18px] py-[8px] font-secondary text-xl text-neutral-01">
+                  <button className="rounded bg-primary px-[18px] py-[8px] font-secondary text-xl text-neutral-01 cursor-pointer">
                     Join
                   </button>
                 </div>
