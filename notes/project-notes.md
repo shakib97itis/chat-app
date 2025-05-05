@@ -9,6 +9,17 @@
 - [x] Figure out responsive breakpoints, what will be the best approach for this project?
 - [x] Download and setup all the images and icons.
 - [x] Create initial plan for all the sections and reuseable component.
+- [x] Home Page
+  - [x] Create a container component for this type of page (Reuseable component)
+  - [x] navigation bar (Reuseable component)
+  - [x] Dashboard Card (Reuseable component)
+  - [x] search bar (Reuseable component)
+- [] Notification Page - comming soon
+  - [] Setup the notification page and wrap the content inside the main container.
+  - [] Make the search bar reuseable component.
+
+- [] Settings Page - comming soon
+- [] Message Page - comming soon
 
 ## General Notes
 
@@ -44,7 +55,7 @@
 
 ## Pages
 
-### Registration Page
+### Registration Page (Done)
 
 - LogInSignUpTemplate as wrapper (Reuseable component)
 
@@ -52,12 +63,12 @@
   - Form component that's includes all the registration functionality.
     - indivisual input component (reuseable component)
 
-### Login Page
+### Login Page (Done)
 
 - Use same reuseable components as registration page
 - loginWithThirdPartyServiceButton. (Reuseable component)
 
-### Home Page
+### Home Page (Done)
 
 - Create a container component for this type of page (Reuseable component)
 - navigation bar (Reuseable component)
@@ -73,11 +84,15 @@
 
 ### Notification Page
 
-- comming soon
+- We need to make the search bar reuseable component.
+- will have navigation bar in the lift.
+- Will wrap the content inside the main container.
+- There wil be a notificationList component that will contain all the notification list and functionality.
+- There will be a notificationListItem component that will be the reuseable component for each notification item.
 
 ## Settings Page
 
-- comming soon. 
+- comming soon.
 
 ## Reuseable Components
 
@@ -85,15 +100,15 @@
 
 - container (Reuseable component)
 
-### LogInSignUpTemplate
-  
+### LogInSignUpTemplate (Done)
+
 - This component is not the main comtainer.
 - This should be the wrapper for login and signup form.
 - Also this component will contain images.
 - Banner images should be responsive.
 
-### Input
-  
+### Input (Done)
+
 - The input component has two varients just diffrent styles.
 - Reuseable component
 - props: label, placeholder, varient, type.
@@ -104,7 +119,7 @@
   AiFillEye
   AiFillEyeInvisible
 
-### LoginSignUpButton
+### LoginSignUpButton (Done)
 
 - props: varient, onclick
 - The button has twor varient one and two. diffent varient will have diffrent design.
@@ -116,13 +131,40 @@
 
 ### Navigation
 
-- This component will have some sub component.
-- UserProfile (Reuseable component)
-- nav items - will crate on the fly.
-- logOutButton - will think about it later.
+- ui
+  - This component will have some sub component.
+  - UserProfile (Reuseable component)
+  - nav items - will crate on the fly.
+  - logOutButton.
+- Functionality
+  - Think about it later.
 
-### Panel list
+### DashboardCard
+
+ui
+
+- Card has shadow and border radius.
+- Card has a title and a description.
+- Card has a button.
+- Card has a image.
+- card has a bottom line but the last card list item will not have a bottom line.
+
+Functionality
 
 - this component will fetch data from the server.
 - Then loop through the data and render the list.
-- panels list item (Reuseable component)
+  example data:
+
+```json
+{
+  "data": [
+    {
+      "id": 1, // unique id of the card
+      "title": "Card Title 1",
+      "description": "Description 1",
+      "imageUrl": "image1.png"
+      "text": "Button 1",
+    },
+  ]
+}
+```
