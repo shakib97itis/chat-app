@@ -1,6 +1,9 @@
 import Input from "../../components/common/formComponents/InputV2";
+import InputText from "../../components/common/formComponents/InputText";
 import FormBtn from "../../components/common/buttons/FormBtn";
 import { FcGoogle } from "react-icons/fc";
+import InputEmail from "../../components/common/formComponents/InputEmail";
+import InputPassword from "../../components/common/formComponents/InputPassword";
 
 const LoginForm = () => {
   return (
@@ -20,23 +23,28 @@ const LoginForm = () => {
 
       <form>
         <div>
-          <Input
+          <InputEmail
             type="email"
             label="Email"
             placeholder="joshim@example.com"
             name="email"
             id="email"
             error=""
+            value="hello"
+            handleChange={() => {}}
+            variant="two"
           />
         </div>
         <div>
-          <Input
-            type="password"
+          <InputPassword
             label="Password"
             placeholder="**********"
             name="password"
             id="password"
             error=""
+            value="hello"
+            handleChange={() => {}}
+            variant="two"
           />
         </div>
         <div>

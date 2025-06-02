@@ -3,7 +3,7 @@ import RegistrationForm from "./RegistrationForm";
 
 const Registration = () => {
   /**
-   * TODO: HANDLE REGISTRATION FORM 
+   * TODO: HANDLE REGISTRATION FORM
    * TODO: HANDLE FORM SUBMISSION AND DATA COLLECTION
    */
   return (
@@ -13,18 +13,7 @@ const Registration = () => {
         alt: "Registration Banner Image",
       }}
     >
-      <div>
-        <h1 className="mb-3 font-tertiary text-4xl font-bold text-secondary">
-          Get started with easily register
-        </h1>
-
-        <p className="mb-10 font-tertiary text-xl text-neutral-06 opacity-40">
-          Free register and you can enjoy it
-        </p>
-        <div>
-          <RegistrationForm />
-        </div>
-      </div>
+      <RegistrationForm />
     </LoginRegistrationTemplate>
   );
 };
