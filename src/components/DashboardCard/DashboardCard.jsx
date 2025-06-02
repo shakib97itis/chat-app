@@ -1,8 +1,9 @@
-import React from "react";
 import { IoEllipsisVertical } from "react-icons/io5";
 import DashboardCardItem from "./DashboardCardItem";
+import Search from "../common/search/Search";
+import { useState } from "react";
 
-const DashboardCard = ({ cardTitle }) => {
+const DashboardCard = ({ cardTitle, searchVisible = false }) => {
   const groupList = [
     {
       id: 1, // unique id of the card
@@ -34,23 +35,43 @@ const DashboardCard = ({ cardTitle }) => {
     },
   ];
 
-  return (
-    <div className="rounded-3xl px-[20px] py-[20px] shadow-lg">
-      <div className="flex items-center justify-between">
-        <h2 className="font-secondary text-xl font-semibold">{cardTitle}</h2>
-        <button className="cursor-pointer text-2xl text-primary">
-          <IoEllipsisVertical />
-        </button>
-      </div>
-      {/* Dashboard Card List */}
-      <ul>
-        {groupList.map((item, index, arr) => {
-          const isLastItem = index === arr.length - 1;
+  // eslint-disable-next-line no-unused-vars
+  const [isSearchVisible, setIsSearchVisible] = useState(searchVisible);
 
-          return <DashboardCardItem key={item.id} isLastItem={isLastItem} listTitle={item.title} listDescription={item.description} listImgUrl={item.imageUrl} />;
-        })}
-      </ul>
-    </div>
+  return (
+    <>
+      <div className="grow items-stretch grid">
+        {isSearchVisible && <Search />}
+        {/* Dashboard Card Header */}
+        <div className="rounded-3xl px-[20px] py-[20px] shadow-lg">
+          <div className="flex items-center justify-between">
+            <h2 className="font-secondary text-xl font-semibold">
+              {cardTitle}
+            </h2>
+            <button className="cursor-pointer text-2xl text-primary">
+              <IoEllipsisVertical />
+            </button>
+          </div>
+
+          {/* Dashboard Card List */}
+          <ul>
+            {groupList.map((item, index, arr) => {
+              const isLastItem = index === arr.length - 1;
+
+              return (
+                <DashboardCardItem
+                  key={item.id}
+                  isLastItem={isLastItem}
+                  listTitle={item.title}
+                  listDescription={item.description}
+                  listImgUrl={item.imageUrl}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </>
   );
 };
 
