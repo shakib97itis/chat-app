@@ -1,7 +1,6 @@
 import InputEmail from "../../components/common/formComponents/InputEmail";
 import InputPassword from "../../components/common/formComponents/InputPassword";
 import InputText from "../../components/common/formComponents/InputText";
-import Input from "../../components/common/formComponents/InputV1";
 
 const RegistrationForm = () => {
   return (

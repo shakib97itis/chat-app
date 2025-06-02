@@ -1,5 +1,3 @@
-import Input from "../../components/common/formComponents/InputV2";
-import InputText from "../../components/common/formComponents/InputText";
 import FormBtn from "../../components/common/buttons/FormBtn";
 import { FcGoogle } from "react-icons/fc";
 import InputEmail from "../../components/common/formComponents/InputEmail";
