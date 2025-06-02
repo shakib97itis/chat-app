@@ -1,4 +1,3 @@
-import React from "react";
 import LoginRegistrationTemplate from "../../components/LoginRegistrationTemplate/LoginRegistrationTemplate";
 import RegistrationForm from "./RegistrationForm";
 

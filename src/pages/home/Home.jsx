@@ -4,6 +4,7 @@ import Navigation from "../../components/navigation/Navigation";
 import DashboardCard from "../../components/DashboardCard/DashboardCard";
 import { RiSearchLine } from "react-icons/ri";
 import { IoEllipsisVertical } from "react-icons/io5";
+import Search from "../../components/common/search/Search";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         <main className="grid w-full gap-[20px] lg:grid-cols-2 xl:grid-cols-3">
           <div className="">
             <div>
-              <div className="relative mb-[22px] rounded-[20px] shadow-lg">
+              {/* <div className="relative mb-[22px] rounded-[20px] shadow-lg">
                 <input
                   className="w-full rounded-3xl px-[20px] py-[16px] ps-[50px] font-secondary text-base font-medium"
                   type="text"
@@ -29,7 +30,8 @@ const Home = () => {
                 <span className="absolute top-1/2 right-[20px] -translate-y-1/2 text-2xl text-primary">
                   <IoEllipsisVertical />
                 </span>
-              </div>
+              </div> */}
+              <Search />
               <DashboardCard listTitle={"Explore Group"} />
             </div>
           </div>
