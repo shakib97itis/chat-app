@@ -4,6 +4,7 @@ import Registration from "./pages/ragistration/Registration";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Icons from "./Icons";
+import Message from "./pages/message/Message";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/icons" element={<Icons />} />
+        <Route path="/message" element={<Message />} />
       </Routes>
     </BrowserRouter>
   );

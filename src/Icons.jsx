@@ -33,6 +33,7 @@ const Icons = () => {
       <div>
         <ImExit />
       </div>
+      {/* Vertical dot ... */}
       <div>
         <IoEllipsisVertical />
       </div>
