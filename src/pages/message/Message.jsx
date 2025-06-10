@@ -20,7 +20,6 @@ const Message = () => {
           <div className="col-span-1">
             <Search />
             <DashboardCard cardTitle={"Messages"} />
-            <DashboardCard cardTitle={"Group"} />
           </div>
           {/* Right Side */}
           <div className="col-span-2">
