@@ -26,13 +26,13 @@ const DashboardCard = ({ cardTitle, searchVisible = false }) => {
       imageUrl: "/profile-img/person-3.png",
       text: "Button 3",
     },
-    {
-      id: 4, // unique id of the card
-      title: "Card Title 4",
-      description: "Description 4",
-      imageUrl: "/profile-img/person-4.png",
-      text: "Button 4",
-    },
+    // {
+    //   id: 4, // unique id of the card
+    //   title: "Card Title 4",
+    //   description: "Description 4",
+    //   imageUrl: "/profile-img/person-4.png",
+    //   text: "Button 4",
+    // },
   ];
 
   // eslint-disable-next-line no-unused-vars
