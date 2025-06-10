@@ -14,12 +14,19 @@
   - [x] navigation bar (Reuseable component)
   - [x] Dashboard Card (Reuseable component)
   - [x] search bar (Reuseable component)
-- [] Notification Page - comming soon
-  - [] Setup the notification page and wrap the content inside the main container.
-  - [] Make the search bar reuseable component.
+- [x] Notification Page
+  - [x] Setup the notification page and wrap the content inside the main container.
+  - [x] Make the search bar reuseable component.
+- [x] Settings Page
+- [x] Message Page
 
-- [] Settings Page - comming soon
-- [] Message Page - comming soon
+- [] Match all the component with the design system
+  - [] Registration Page
+  - [] Login Page
+  - [] Home Page
+  - [] Message Page
+  - [] Notification Page
+  - [] Settings Page
 
 ## General Notes
 
