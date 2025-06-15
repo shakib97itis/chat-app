@@ -1,4 +1,5 @@
-import React from "react";
+import PropTypes from "prop-types";
+import DashboardBtn from "../common/buttons/DashboardBtn";
 
 const DashboardCardItem = ({
   isLastItem,
@@ -24,14 +25,20 @@ const DashboardCardItem = ({
           <p className="text-sm font-medium">{listDescription}</p>
         </div>
         <div className="ms-auto">
-          <button className="cursor-pointer rounded bg-primary px-[18px] py-[8px] font-secondary text-xl text-neutral-01">
-            Join
-          </button>
+          {/* TODO: DASHBOARD BUTTON */}
+          <DashboardBtn variant="one">Join</DashboardBtn>
         </div>
       </div>
       {isLastItem ? null : <div className="h-0.5 bg-neutral-06/20"></div>}
     </li>
   );
+};
+
+DashboardCardItem.propTypes = {
+  isLastItem: PropTypes.bool.isRequired,
+  listTitle: PropTypes.string.isRequired,
+  listDescription: PropTypes.string.isRequired,
+  listImgUrl: PropTypes.string.isRequired,
 };
 
 export default DashboardCardItem;
