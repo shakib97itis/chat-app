@@ -21,12 +21,15 @@
 - [x] Message Page
 
 - [] Match all the component with the design system
+  - [x] Registration Page
+  - [x] Login Page
+  - [x] Home Page
+  - [x] Message Page
+  - [x] Notification Page
+  - [x] Settings Page
+- Implement firebase authentication
   - [] Registration Page
   - [] Login Page
-  - [] Home Page
-  - [] Message Page
-  - [] Notification Page
-  - [] Settings Page
 
 ## General Notes
 

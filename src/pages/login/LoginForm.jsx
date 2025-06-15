@@ -2,6 +2,7 @@ import FormBtn from "../../components/common/buttons/FormBtn";
 import { FcGoogle } from "react-icons/fc";
 import InputEmail from "../../components/common/formComponents/InputEmail";
 import InputPassword from "../../components/common/formComponents/InputPassword";
+import { Link } from "react-router";
 
 const LoginForm = () => {
   return (
@@ -14,10 +15,6 @@ const LoginForm = () => {
         <FcGoogle className="text-2xl" />
         <span>Login with Google</span>
       </FormBtn>
-
-      {/* <p className="mb-10 font-tertiary text-xl text-neutral-06 opacity-40">
-        Free login and you can enjoy it
-      </p> */}
 
       <form>
         <div>
@@ -49,6 +46,12 @@ const LoginForm = () => {
           <FormBtn variant={"two"}>Login</FormBtn>
         </div>
       </form>
+      <p className="mt-6 font-tertiary text-lg">
+        Don't have an account?{" "}
+        <Link to="/registration" className="text-tertiary font-bold hover:underline">
+          Register
+        </Link>
+      </p>
     </div>
   );
 };

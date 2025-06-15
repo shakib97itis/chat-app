@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../components/common/container/container";
+import Container from "../../components/common/container/Container";
 import Navigation from "../../components/navigation/Navigation";
 import Search from "../../components/common/search/Search";
 import {
@@ -63,7 +63,7 @@ const Settings = () => {
             {/* RIGHT SIDE CARD */}
             <div className="flex flex-col rounded-2xl p-6 shadow-md">
               <h2 className="mb-4 text-sm font-semibold text-neutral-04">
-                Profile Settings
+                Account Settings
               </h2>
 
               <ul className="text-gray-700 grow space-y-4 text-sm">
