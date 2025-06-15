@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
+import PropTypes from "prop-types";
 
 const InputPassword = ({
   className,
@@ -41,10 +42,10 @@ const InputPassword = ({
             name={name}
             id={id}
             placeholder={placeholder}
-            value=""
+            value={value}
             onChange={handleChange}
           />
-          {/* password eye */}
+          {/* PASSWORD EYE ICON */}
           <div
             className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer"
             onClick={togglePasswordVisibility}
@@ -107,6 +108,18 @@ const InputPassword = ({
       </div>
     );
   }
+};
+
+InputPassword.propTypes = {
+  className: PropTypes.string,
+  error: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  variant: PropTypes.oneOf(["one", "two"]),
 };
 
 export default InputPassword;

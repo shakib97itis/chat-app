@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const InputEmail = ({
   className,
   error,
@@ -10,7 +12,7 @@ const InputEmail = ({
   variant,
 }) => {
   /**
-   * varient == "one"
+   * VARIANT ONE
    */
   if (variant === "one") {
     return (
@@ -47,7 +49,7 @@ const InputEmail = ({
   }
 
   /**
-   * varient == "two"
+   * VARIANT TWO
    */
 
   if (variant == "two") {
@@ -83,6 +85,18 @@ const InputEmail = ({
       </div>
     );
   }
+};
+
+InputEmail.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  error: PropTypes.string,
+  id: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  variant: PropTypes.oneOf(["one", "two"]),
 };
 
 export default InputEmail;

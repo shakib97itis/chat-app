@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const InputText = ({
   className,
@@ -41,6 +41,17 @@ const InputText = ({
       </div>
     </div>
   );
+};
+
+InputText.propTypes = {
+  className: PropTypes.string,
+  error: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default InputText;

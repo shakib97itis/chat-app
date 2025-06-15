@@ -1,8 +1,11 @@
-import React from "react";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { RiSearchLine } from "react-icons/ri";
 
 const Search = () => {
+  /**
+   * TODO: Make the search dynamic.
+   */
+  
   return (
     <div className="relative mb-[22px] rounded-[20px] shadow-lg">
       <input
