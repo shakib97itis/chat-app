@@ -26,7 +26,7 @@
   - [x] Home Page
   - [x] Message Page
   - [x] Notification Page
-  - [x] Settings Page
+  - [] Settings Page -- (comming soon)
 - Implement firebase authentication
   - [] Registration Page
   - [] Login Page
