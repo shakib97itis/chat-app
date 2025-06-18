@@ -1,16 +1,16 @@
-import LoginRegistrationTemplate from "../../components/LoginRegistrationTemplate/LoginRegistrationTemplate";
-import LoginForm from "./LoginForm";
+import LoginRegistrationLayout from "../../layouts/LoginRegistrationLayout";
+import LoginForm from "../../features/auth/components/LoginForm";
 
 const Login = () => {
   return (
-    <LoginRegistrationTemplate
+    <LoginRegistrationLayout
       bannerImg={{
         src: "/login-banner.png",
         alt: "Login Banner Image",
       }}
     >
       <LoginForm />
-    </LoginRegistrationTemplate>
+    </LoginRegistrationLayout>
   );
 };
 

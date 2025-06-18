@@ -8,7 +8,7 @@ import {
   browserLocalPersistence,
 } from "firebase/auth";
 import { AuthContext } from "./AuthContext";
-import { auth } from "../../firebase";
+import { auth } from "../../services/firebase";
 
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);

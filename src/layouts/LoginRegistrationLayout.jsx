@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const LoginRegistrationTemplate = ({ children, bannerImg }) => {
+const LoginRegistrationLayout = ({ children, bannerImg }) => {
   return (
     <section className="">
-      <div className="flex lg:p-0 min-h-screen justify-between p-4 lg:h-screen">
+      <div className="flex min-h-screen justify-between p-4 lg:h-screen lg:p-0">
         {/* LEFT SIDE */}
         <div className="flex w-full items-center justify-center lg:w-3/5 lg:justify-end lg:pe-[68px]">
           {children}
@@ -21,7 +21,7 @@ const LoginRegistrationTemplate = ({ children, bannerImg }) => {
   );
 };
 
-LoginRegistrationTemplate.propTypes = {
+LoginRegistrationLayout.propTypes = {
   children: PropTypes.node.isRequired,
   bannerImg: PropTypes.shape({
     src: PropTypes.string.isRequired,
@@ -29,4 +29,4 @@ LoginRegistrationTemplate.propTypes = {
   }),
 };
 
-export default LoginRegistrationTemplate;
+export default LoginRegistrationLayout;

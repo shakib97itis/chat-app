@@ -1,7 +1,7 @@
 import DashboardCardItem from "./DashboardCardItem";
 import { useState } from "react";
 import { IoEllipsisVertical } from "react-icons/io5";
-import Search from "../common/search/Search";
+import Search from "../search/Search";
 import PropTypes from "prop-types";
 
 const DashboardCard = ({ cardTitle, searchVisible, items }) => {

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import DashboardBtn from "../common/buttons/DashboardBtn";
+import DashboardBtn from "../buttons/DashboardBtn";
 
 const DashboardCardItem = ({
   isLastItem,

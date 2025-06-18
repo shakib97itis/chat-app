@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "../../components/common/container/Container";
+import MainLayout from "../../layouts/MainLayout";
 import Navigation from "../../components/navigation/Navigation";
-import Search from "../../components/common/search/Search";
+import Search from "../../components/search/Search";
 import {
   FaEdit,
   FaRegCommentDots,
@@ -11,7 +11,7 @@ import {
 
 const Settings = () => {
   return (
-    <Container>
+    <MainLayout>
       <div className="flex h-full gap-[20px]">
         {/* NAVIGATION BAR */}
         <Navigation />
@@ -90,7 +90,7 @@ const Settings = () => {
           </div>
         </main>
       </div>
-    </Container>
+    </MainLayout>
   );
 };
 

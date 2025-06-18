@@ -1,7 +1,7 @@
-import FormBtn from "../../components/common/buttons/FormBtn";
+import FormBtn from "../../../components/buttons/FormBtn";
+import InputEmail from "../../../components/formComponents/InputEmail";
+import InputPassword from "../../../components/formComponents/InputPassword";
 import { FcGoogle } from "react-icons/fc";
-import InputEmail from "../../components/common/formComponents/InputEmail";
-import InputPassword from "../../components/common/formComponents/InputPassword";
 import { Link } from "react-router";
 
 const LoginForm = () => {

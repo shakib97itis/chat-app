@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import FormBtn from "../../components/common/buttons/FormBtn";
-import InputEmail from "../../components/common/formComponents/InputEmail";
-import InputPassword from "../../components/common/formComponents/InputPassword";
-import InputText from "../../components/common/formComponents/InputText";
+import FormBtn from "../../../components/buttons/FormBtn";
+import InputEmail from "../../../components/formComponents/InputEmail";
+import InputPassword from "../../../components/formComponents/InputPassword";
+import InputText from "../../../components/formComponents/InputText";
 import { useState } from "react";
-import { useAuth } from "../../context/authContext/useAuth";
+import { useAuth } from "../../../context/auth/useAuth";
 
 const initialFormData = {
   email: "",
