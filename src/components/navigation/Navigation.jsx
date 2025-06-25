@@ -4,12 +4,27 @@ import { LuMessageCircleMore } from "react-icons/lu";
 import { MdNotifications } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { ImExit } from "react-icons/im";
+import useAuth from "../../context/auth/useAuth";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Navigation = () => {
-  /**
-   * TODO: write navigation logic here.
-   * TODO: add logout logic later.
-   */
+  const { logout } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    setLoading(true);
+    try {
+      await logout();
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center rounded-2xl bg-primary py-[20px]">
       {/* PROFILE IMAGE */}
@@ -36,8 +51,11 @@ const Navigation = () => {
 
       {/* LOGOUT */}
       <div className="mt-auto">
-        <div className="group cursor-pointer text-neutral-01">
-          <ImExit className="text-[32px] sm:text-[46px]" />
+        <div
+          onClick={handleLogout}
+          className="group cursor-pointer text-neutral-01"
+        >
+          {loading ? <span className="animate-spin">🔄</span> : <ImExit />}
         </div>
       </div>
     </div>
