@@ -7,7 +7,10 @@ import FriendRequestList from "../../features/users/components/FriendRequestList
 import BlockList from "../../features/users/components/BlockList";
 import GroupList from "../../features/users/components/GroupList";
 import MyGroupList from "../../features/users/components/MyGroupList";
+import useAuth from "../../context/auth/useAuth";
 const Home = () => {
+  const { user } = useAuth();
+  console.log("User in Home:", user);
   /**
    * We need to fetch the data from the server to display the dashboard cards.
    * For now, we will use static data.
