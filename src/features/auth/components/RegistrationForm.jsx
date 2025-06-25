@@ -4,7 +4,7 @@ import InputEmail from "../../../components/formComponents/InputEmail";
 import InputPassword from "../../../components/formComponents/InputPassword";
 import InputText from "../../../components/formComponents/InputText";
 import { useState } from "react";
-import { useAuth } from "../../../context/auth/useAuth";
+import useAuth from "../../../context/auth/useAuth";
 
 const initialFormData = {
   email: "",
@@ -27,7 +27,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signup(formData.email, formData.password);
+      await signup(formData.email, formData.password, formData.name);
       // TODO: Handle successful registration (e.g., redirect or show a success message)
       setFormData({ ...initialFormData }); // Reset form data after successful registration
       console.log("Registration successful");
