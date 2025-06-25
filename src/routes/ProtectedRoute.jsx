@@ -1,15 +1,14 @@
-import React from "react";
-import { useAuth } from "../context/authContext/useAuth";
-import { redirect } from "react-router";
+import { Navigate, Outlet } from "react-router";
+import useAuth from "../context/auth/useAuth";
 
-const ProtectedRoutes = ({ children }) => {
+const ProtectedRoutes = () => {
   const { user, loading } = useAuth();
 
   return (
     <>
       {loading && <div>Loading...</div>}
-      {!loading && user && children}
-      {!loading && !user && redirect("/login")}
+      {!loading && user && <Outlet />}
+      {!loading && !user && <Navigate to="/login" replace />}
     </>
   );
 };
